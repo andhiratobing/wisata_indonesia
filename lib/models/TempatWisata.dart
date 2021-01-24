@@ -73,7 +73,44 @@ List<Activity> bali = [
   ),
 ];
 
-
+List<Activity> ntt = [
+  Activity(
+    gambarUrl: 'assets/images/danau_kalimutu.jpg',
+    nama: 'Danau Kalimutu',
+    provinsi: 'NTT',
+    kota: 'Kab.Ende',
+    startTimes: ['07.00 - 17.00', 'WIB'],
+    rating: 4,
+    harga: '25.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/labuan_bajo.jpg',
+    nama: 'Labuan Bajo',
+    provinsi: 'NTT',
+    kota: 'Kab.Manggarai Barat',
+    startTimes: ['06.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '40.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/pulau_alor.jpg',
+    nama: 'Pulau Alor',
+    provinsi: 'NTT',
+    kota: 'Kab.Alor',
+    startTimes: ['07.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '30.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/pulau_komodo.jpg',
+    nama: 'Pulau Komodo',
+    provinsi: 'NTT',
+    kota: 'Kab.Manggarai Barat',
+    startTimes: ['06.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '50.000',
+  )
+];
 
 List<Activity> jawatimur = [
   Activity(
@@ -153,21 +190,64 @@ List<Activity> jawatengah = [
   )
 ];
 
+List<Activity> papuabarat = [
+  Activity(
+    gambarUrl: 'assets/images/misool.jpg',
+    nama: 'Misool',
+    provinsi: 'Papua Barat',
+    kota: 'Kab.Raja Ampat',
+    startTimes: ['06.00 - 17.00', 'WIB'],
+    rating: 5,
+    harga: '25.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/pasir_timbul.jpg',
+    nama: 'Pasir Timbul',
+    provinsi: 'Papua Barat',
+    kota: 'Kab.Raja Ampat',
+    startTimes: ['06.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '30.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/pianemo.jpg',
+    nama: 'Pianemo',
+    provinsi: 'Papua Barat',
+    kota: 'Kab.Raja Ampat',
+    startTimes: ['06.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '30.000',
+  ),
+  Activity(
+    gambarUrl: 'assets/images/pulau_arborek.jpg',
+    nama: 'Pulau Arborek',
+    provinsi: 'Papua Barat',
+    kota: 'Kab.Raja Ampat',
+    startTimes: ['06.00-17.00', 'WIB'],
+    rating: 5,
+    harga: '40.000',
+  )
+];
+
+
 
 
 List<TempatWisata> ListWisata = [
   TempatWisata(
-    gambarUrl: 'assets/images/tanah_lot.jpg',
+    gambarUrl: 'assets/images/pulau_komodo.jpg',
+    provinsi: 'NTT',
+    deskripsi: 'Pesona Wisata NTT Memang Begitu Indah',
+    activities: ntt,
+  ),
+  TempatWisata(
+    gambarUrl: 'assets/images/pure_uluwatu.jpg',
     provinsi: 'Bali',
-    kota: 'Kab.Tabanan ',
     deskripsi: 'Pesona Wisata Bali Memang Begitu Indah',
     activities: bali,
   ),
-
   TempatWisata(
     gambarUrl: 'assets/images/gunung_bromo.jpg',
     provinsi: 'Jawa  Timur',
-    kota: 'Kab.Malang',
     deskripsi: 'Pesona Wisata Jawa Timur Memang Begitu Indah',
     activities: jawatimur,
   ),
@@ -175,8 +255,13 @@ List<TempatWisata> ListWisata = [
   TempatWisata(
     gambarUrl: 'assets/images/candi_borobudur.jpg',
     provinsi: 'Jawa Tengah',
-    kota: 'Kab.Magelang',
     deskripsi: 'Pesona Wisata Jawa Tengah Memang Begitu Indah',
     activities: jawatengah,
+  ),
+  TempatWisata(
+    gambarUrl: 'assets/images/pasir_timbul.jpg',
+    provinsi: 'Papua Barat',
+    deskripsi: 'Pesona Wisata Papua Barat Memang Begitu Indah',
+    activities: papuabarat,
   ),
 ];

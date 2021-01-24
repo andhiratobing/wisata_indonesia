@@ -199,9 +199,9 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       ),
                     ),
                     Positioned(
-                      left: 10.0,
-                      top: 10.0,
-                      bottom: 10.0,
+                    left: 20.0,
+                    top: 15.0,
+                    bottom: 15.0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image(
