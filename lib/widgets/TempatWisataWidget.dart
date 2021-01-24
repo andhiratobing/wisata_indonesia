@@ -21,7 +21,7 @@ class TempatWisataWidget extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: () => print('See All'),
+                onTap: () => print('Lihat semua'),
                 child: Text(
                   'Lihat semua',
                   style: TextStyle(
@@ -36,7 +36,7 @@ class TempatWisataWidget extends StatelessWidget {
           ),
         ),
         Container(
-          height: 330.0,
+          height: 410.0,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             itemCount: ListWisata.length,
@@ -52,14 +52,15 @@ class TempatWisataWidget extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 child: Container(
-                  margin: EdgeInsets.all(10.0),
-                  width: 210.0,
+                  margin: EdgeInsets.all(20.0),
+                  width: 220.0,
                   child: Stack(
                     alignment: Alignment.topCenter,
                     children: <Widget>[
                       Positioned(
-                        bottom: 15.0,
+                        bottom: 20.0,
                         child: Container(
                           height: 140.0,
                           width: 220.0,
@@ -73,14 +74,42 @@ class TempatWisataWidget extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: <Widget>[
+                                    Container(
+                                      decoration: BoxDecoration(
+                                        color: Theme.of(context).primaryColor,
+                                        borderRadius: BorderRadius.circular(20.0),
+                                      ),
+                                     child: Icon(
+                                        Icons.location_on_outlined,
+                                        size: 20.0,
+                                        color: Colors.white,
+                                      ),
+                                    ),
+                                    SizedBox(width: 5.0),
+                                    Text(
+                                      wisata.provinsi,
+                                      style: TextStyle(
+                                        color: Colors.black,
+                                        fontSize: 16.0,
+                                        fontWeight: FontWeight.w600,
+                                        letterSpacing: 0.5,
+                                        fontFamily: 'NunitoSans-Regular',
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                                SizedBox(height: 20.0),
                                 Text(
                                   '${wisata.activities.length} wisata',
                                   style: TextStyle(
-                                    fontSize: 20.0,
+                                    fontSize: 18.0,
                                     fontWeight: FontWeight.w600,
                                     letterSpacing: 0.3,
                                     color: Colors.black87,
-                                    fontFamily: 'Montserrat-SemiBold',
+                                    fontFamily: 'NunitoSans-Regular',
                                   ),
                                 ),
                                 Text(
@@ -103,8 +132,8 @@ class TempatWisataWidget extends StatelessWidget {
                           boxShadow: [
                             BoxShadow(
                               color: Colors.black26,
-                              offset: Offset(0.0, 2.0),
-                              blurRadius: 6.0,
+                              offset: Offset(0.0, 1.0),
+                              blurRadius: 1.0,
                             ),
                           ],
                         ),
@@ -115,45 +144,11 @@ class TempatWisataWidget extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image(
-                                  height: 220.0,
-                                  width: 200.0,
+                                  height: 240.0,
+                                  width: 220.0,
                                   image: AssetImage(wisata.gambarUrl),
                                   fit: BoxFit.cover,
                                 ),
-                              ),
-                            ),
-                            Positioned(
-                              left: 10.0,
-                              bottom: 10.0,
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: <Widget>[
-                                  Text(
-                                    wisata.provinsi,
-                                    style: TextStyle(
-                                      color: Colors.white,
-                                      fontSize: 24.0,
-                                      fontWeight: FontWeight.w600,
-                                      letterSpacing: 1.2,
-                                    ),
-                                  ),
-                                  Row(
-                                    children: <Widget>[
-                                      Icon(
-                                        Icons.location_on_outlined,
-                                        size: 15.0,
-                                        color: Colors.white,
-                                      ),
-                                      SizedBox(width: 5.0),
-                                      Text(
-                                        wisata.kota,
-                                        style: TextStyle(
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ],
                               ),
                             ),
                           ],

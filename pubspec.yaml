@@ -25,6 +25,7 @@ flutter:
   assets:
     - assets/images/
   fonts:
+
     - family: MontserratSemiBold
       fonts:
         - asset: fonts/Montserrat-SemiBold.ttf
@@ -40,3 +41,7 @@ flutter:
     - family: SlencoBlack
       fonts:
         - asset: fonts/SlencoBlack.otf
+
+    - family: NunitoSans-Regular
+      fonts:
+        - asset: fonts/NunitoSans-Regular.ttf

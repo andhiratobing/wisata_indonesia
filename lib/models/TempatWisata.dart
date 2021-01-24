@@ -27,7 +27,7 @@ List<Activity> bali = [
     harga: '30.000',
   ),
   Activity(
-    gambarUrl: 'assets/images/garuda_wisnu_kencanajpg',
+    gambarUrl: 'assets/images/garuda_wisnu_kencana.jpg',
     nama: 'Garuda Wisnu Kencana',
     provinsi: 'Bali',
     kota: 'Kab.Badung',
@@ -75,7 +75,7 @@ List<Activity> bali = [
 
 
 
-List<Activity> jawa_timur = [
+List<Activity> jawatimur = [
   Activity(
     gambarUrl: 'assets/images/gunung_bromo.jpg',
     nama: 'Gunung Bromo',
@@ -132,7 +132,7 @@ List<Activity> jawa_timur = [
   ),
 ];
 
-List<Activity> jawa_tengah = [
+List<Activity> jawatengah = [
   Activity(
     gambarUrl: 'assets/images/candi_borobudur.jpg',
     nama: 'Candi Borobudur',
@@ -169,7 +169,7 @@ List<TempatWisata> ListWisata = [
     provinsi: 'Jawa  Timur',
     kota: 'Kab.Malang',
     deskripsi: 'Pesona Wisata Jawa Timur Memang Begitu Indah',
-    activities: jawa_timur,
+    activities: jawatimur,
   ),
 
   TempatWisata(
@@ -177,6 +177,6 @@ List<TempatWisata> ListWisata = [
     provinsi: 'Jawa Tengah',
     kota: 'Kab.Magelang',
     deskripsi: 'Pesona Wisata Jawa Tengah Memang Begitu Indah',
-    activities: jawa_tengah,
+    activities: jawatengah,
   ),
 ];

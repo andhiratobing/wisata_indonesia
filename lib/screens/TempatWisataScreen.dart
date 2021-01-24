@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wisata_indonesia/models/Activity.dart';
 import 'package:wisata_indonesia/models/TempatWisata.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class TempatWisataScreen extends StatefulWidget {
   final TempatWisata wisata;
@@ -84,27 +83,10 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       widget.wisata.provinsi,
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 35.0,
+                        fontSize: 22.0,
                         fontWeight: FontWeight.w600,
                         letterSpacing: 1.2,
                       ),
-                    ),
-                    Row(
-                      children: <Widget>[
-                        Icon(
-                          Icons.location_on_outlined,
-                          size: 20.0,
-                          color: Colors.white70,
-                        ),
-                        SizedBox(width: 5.0),
-                        Text(
-                          widget.wisata.kota,
-                          style: TextStyle(
-                            color: Colors.white70,
-                            fontSize: 20.0,
-                          ),
-                        ),
-                      ],
                     ),
                   ],
                 ),
@@ -116,12 +98,11 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
               padding: EdgeInsets.only(top: 10.0, bottom: 15.0),
               itemCount: widget.wisata.activities.length,
               itemBuilder: (BuildContext context, int index) {
-                Activity activity =
-                    widget.wisata.activities[index];
+                Activity activity = widget.wisata.activities[index];
                 return Stack(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(40.0, 5.0, 20.0, 5.0),
+                      margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
                       height: 170.0,
                       width: double.infinity,
                       decoration: BoxDecoration(
@@ -129,7 +110,7 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                         borderRadius: BorderRadius.circular(20.0),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.fromLTRB(100.0, 20.0, 20.0, 20.0),
+                        padding: EdgeInsets.fromLTRB(130.0, 20.0, 20.0, 20.0),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
@@ -161,7 +142,7 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                                     Text(
                                       '\Rp.${activity.harga}',
                                       style: TextStyle(
-                                        fontSize: 22.0,
+                                        fontSize: 16.0,
                                         fontWeight: FontWeight.w600,
                                       ),
                                     ),
@@ -181,6 +162,7 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                                 color: Colors.grey,
                               ),
                             ),
+                            SizedBox(height: 10.0),
                             _buildRatingStars(activity.rating),
                             SizedBox(height: 10.0),
                             Row(
@@ -217,17 +199,17 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       ),
                     ),
                     Positioned(
-                      left: 20.0,
-                      top: 15.0,
-                      bottom: 15.0,
+                      left: 10.0,
+                      top: 10.0,
+                      bottom: 10.0,
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(20.0),
                         child: Image(
                           width: 110.0,
+                          fit: BoxFit.cover,
                           image: AssetImage(
                             activity.gambarUrl,
                           ),
-                          fit: BoxFit.cover,
                         ),
                       ),
                     ),
