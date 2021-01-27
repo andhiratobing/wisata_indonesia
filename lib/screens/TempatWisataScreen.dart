@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:wisata_indonesia/models/Activity.dart';
 import 'package:wisata_indonesia/models/TempatWisata.dart';
 
@@ -95,16 +96,18 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
           ),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.only(top: 10.0, bottom: 15.0),
+              padding: EdgeInsets.only(top: 10.0, bottom: 30.0),
               itemCount: widget.wisata.activities.length,
               itemBuilder: (BuildContext context, int index) {
                 Activity activity = widget.wisata.activities[index];
                 return Stack(
                   children: <Widget>[
                     Container(
-                      margin: EdgeInsets.fromLTRB(10.0, 5.0, 10.0, 5.0),
-                      height: 170.0,
-                      width: double.infinity,
+                      margin: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 15.0),
+                      width: MediaQuery.of(context).size.width*100.0,
+                      height: MediaQuery.of(context).size.height*0.32,
+                      //height: 190.0,
+                      //width: double.infinity,
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(20.0),
@@ -112,7 +115,6 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       child: Padding(
                         padding: EdgeInsets.fromLTRB(130.0, 20.0, 20.0, 20.0),
                         child: Column(
-                          mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: <Widget>[
                             Row(
@@ -120,11 +122,11 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Container(
-                                  width: 120.0,
+                                  width: MediaQuery.of(context).size.width * 0.27,
                                   child: Text(
                                     activity.nama,
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      fontSize: 16.0,
                                       fontWeight: FontWeight.w600,
                                     ),
                                     overflow: TextOverflow.ellipsis,
@@ -134,16 +136,19 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                                 Column(
                                   children: <Widget>[
                                     Text(
-                                      'Tiket Masuk',
+                                      'Tiket masuk',
                                       style: TextStyle(
-                                        color: Colors.black87,
+                                        fontSize: 12.0,
+                                        color: Colors.black45,
                                       ),
                                     ),
+                                    SizedBox(height: 3.0),
                                     Text(
                                       '\Rp.${activity.harga}',
                                       style: TextStyle(
-                                        fontSize: 16.0,
+                                        fontSize: 13.0,
                                         fontWeight: FontWeight.w600,
+                                        color: Colors.black87,
                                       ),
                                     ),
                                   ],
@@ -162,7 +167,7 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                                 color: Colors.grey,
                               ),
                             ),
-                            SizedBox(height: 10.0),
+                            SizedBox(height: 8.0),
                             _buildRatingStars(activity.rating),
                             SizedBox(height: 10.0),
                             Row(
@@ -179,10 +184,10 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                                     activity.startTimes[0],
                                   ),
                                 ),
-                                SizedBox(width: 10.0),
+                                SizedBox(width: 5.0),
                                 Container(
                                   padding: EdgeInsets.all(5.0),
-                                  width: 40.0,
+                                  width: 60.0,
                                   decoration: BoxDecoration(
                                     color: Theme.of(context).accentColor,
                                     borderRadius: BorderRadius.circular(10.0),
@@ -199,19 +204,20 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       ),
                     ),
                     Positioned(
-                    left: 20.0,
-                    top: 15.0,
-                    bottom: 15.0,
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(20.0),
+                      child : Container(
+                        margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
+                        width: MediaQuery.of(context).size.width * 0.27,
+                        height: MediaQuery.of(context).size.height*0.30,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20.0),
                         child: Image(
-                          width: 110.0,
                           fit: BoxFit.cover,
                           image: AssetImage(
                             activity.gambarUrl,
                           ),
                         ),
                       ),
+                    ),
                     ),
                   ],
                 );

@@ -66,7 +66,7 @@ class TempatWisataWidget extends StatelessWidget {
                           width: 220.0,
                           decoration: BoxDecoration(
                             color: Colors.white,
-                            borderRadius: BorderRadius.circular(10.0),
+                            borderRadius: BorderRadius.circular(20.0),
                           ),
                           child: Padding(
                             padding: EdgeInsets.all(15.0),
@@ -84,7 +84,7 @@ class TempatWisataWidget extends StatelessWidget {
                                       ),
                                      child: Icon(
                                         Icons.location_on_outlined,
-                                        size: 20.0,
+                                        size: 18.0,
                                         color: Colors.white,
                                       ),
                                     ),
@@ -93,7 +93,7 @@ class TempatWisataWidget extends StatelessWidget {
                                       wisata.provinsi,
                                       style: TextStyle(
                                         color: Colors.black,
-                                        fontSize: 16.0,
+                                        fontSize: 14.0,
                                         fontWeight: FontWeight.w600,
                                         letterSpacing: 0.5,
                                         fontFamily: 'NunitoSans-Regular',
@@ -101,7 +101,7 @@ class TempatWisataWidget extends StatelessWidget {
                                     ),
                                   ],
                                 ),
-                                SizedBox(height: 20.0),
+                                SizedBox(height: 10.0),
                                 Text(
                                   '${wisata.activities.length} wisata',
                                   style: TextStyle(
@@ -144,7 +144,7 @@ class TempatWisataWidget extends StatelessWidget {
                               child: ClipRRect(
                                 borderRadius: BorderRadius.circular(20.0),
                                 child: Image(
-                                  height: 240.0,
+                                  height: 230.0,
                                   width: 220.0,
                                   image: AssetImage(wisata.gambarUrl),
                                   fit: BoxFit.cover,
