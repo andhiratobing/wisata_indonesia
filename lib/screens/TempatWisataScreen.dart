@@ -105,7 +105,7 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                     Container(
                       margin: EdgeInsets.fromLTRB(15.0, 15.0, 15.0, 15.0),
                       width: MediaQuery.of(context).size.width*100.0,
-                      height: MediaQuery.of(context).size.height*0.32,
+                      height: MediaQuery.of(context).size.height*0.30,
                       //height: 190.0,
                       //width: double.infinity,
                       decoration: BoxDecoration(
@@ -207,7 +207,8 @@ class _TempatWisataScreenState extends State<TempatWisataScreen> {
                       child : Container(
                         margin: EdgeInsets.fromLTRB(20.0, 20.0, 20.0, 20.0),
                         width: MediaQuery.of(context).size.width * 0.27,
-                        height: MediaQuery.of(context).size.height*0.30,
+                        height: MediaQuery.of(context).size.height*0.25,
+                        alignment: Alignment.center,
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(20.0),
                         child: Image(
